@@ -44,8 +44,20 @@ HMcKye.controller('AboutCtrl', function($scope,$location) {
 });
 
 HMcKye.controller('PhotographyCtrl', function($scope,$location) {
-
-
+	
+	$scope.images = [ { src       :'https://sites.google.com/site/hmckye/_/rsrc/1257614060061/IMG_1395-large.JPG'
+					  , landscape : true }
+					, { src       :'img/cali.JPG'
+					  , landscape : true }
+					, { src       : 'img/yaaaar.JPG'
+					  , landscape : false }
+					, { src       : 'img/cali_red.JPG'
+					  , landscape : false }
+					];
+	$scope.carousel = function(index){
+		$scope.mainImage = $scope.images[index];
+	};
+	$scope.carousel(0)
 });
 
 HMcKye.controller('WritingCtrl', function($scope,$location) {

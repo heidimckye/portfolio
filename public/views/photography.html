@@ -1,6 +1,24 @@
-<div class="panel">
+<div class="">
 
-	<div class="panel-heading">Photography</div>
-	<p>Photography time.</p>
+	<div class=""><h3>Photography</h3></div>
+	
+	<div class="row">
+
+		<div class="col-lg-12">
+
+			<div class="row">
+				<div class="col-lg-12 main_image_container">
+					<img ng-class="{'main_image landscape' : mainImage.landscape, 'main_image portrait' : !mainImage.landscape}" src={{mainImage.src}}></img>
+				</div>
+			</div>
+
+			<div class="row">
+				<div ng-repeat="image in images" class="col-lg-3 thumb_image_container">
+					<img ng-class="{'thumb_image landscape' : image.landscape, 'thumb_image portrait' : !image.landscape}" ng-mouseover="carousel($index)" src={{image.src}}></img>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 </div>
